@@ -21,13 +21,16 @@ class Owners extends Component {
         .catch(error => console.error(error))
     }
     
+    changeCom = boolean => {
+        boolean ? this.state.com = 'com' : this.state.com = ''
+    }
 
     render(){
         return (
             <div>
                 {this.state.requests.map(request =>
                     <div key={request.id}>
-                        {request.status ? this.state.com = "com" : this.state.com = ""}
+                        {request.status ? this.changeCom(true) : this.changeCom(false)}
                         <Link  className={this.state.com}  to={`/requests/services/${this.props.match.params.sid}/owners/${this.props.match.params.oid}/${request.id}`}>
                         <h3>{request.description}</h3>
                         <p>{request.date}</p>
