@@ -1,0 +1,59 @@
+.edit a {
+    display: flexbox;
+    flex-direction: row;
+    margin: 0px 15px;
+    align-content: space-around;
+    color : red;
+  }
+  .list-group-item{
+    background-color: lightgoldenrodyellow;
+    border-bottom: 3px solid #343a40;
+  }
+
+ .form-inline {  
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-top: 2%;
+  }
+  
+  .form-inline label {
+    margin: 5px 10px 5px 0;
+    padding-right:25px;
+  }
+  
+  .form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  .form-inline button {
+    padding: 5px 20px;
+    margin-left: 10px;
+    background-color: rgb(19, 9, 107);
+    border: 1px solid lightgoldenrodyellow;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .form-inline button:hover {
+    background-color: royalblue;
+  }
+  
+  @media (max-width: 800px) {
+    .form-inline input {
+      margin: 10px 0;
+    }
+    
+    .form-inline {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  img {
+    width:100%;
+  }

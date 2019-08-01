@@ -59,14 +59,14 @@ class Services extends Component {
         return (
             <div>
                 {this.state.services.map(service => 
-                    <div key={service._id}>
+                    <div className=" list-group-item justify-content-between align-items-center" key={service._id}>
                         <h3>{service.name}</h3>
                         <p>{service.description}</p>
-                        <Link to={`/categroies/${this.props.match.params.id}/edit/services/${service._id}`} >
+                        <Link className="btn btn-secondary" to={`/categroies/${this.props.match.params.id}/edit/services/${service._id}`} >
                             Edit
                         </Link>
                         &nbsp;
-                        <Link to={`/categroies/${this.props.match.params.id}`} onClick={() => this.destroy(service._id)}>
+                        <Link className="btn btn-danger" to={`/categroies/${this.props.match.params.id}`} onClick={() => this.destroy(service._id)}>
                         Destroy
                         </Link> 
                         <hr/>
@@ -74,7 +74,7 @@ class Services extends Component {
                 )}
                 <details>
                         <summary>Add Service</summary>
-                            <form onSubmit={this.handleSubmit}>
+                            <form className='auth-form text-center' onSubmit={this.handleSubmit}>
                                 <label htmlFor="name">Name</label>
                                 <input
                                 required
@@ -91,7 +91,7 @@ class Services extends Component {
                                 onChange={this.handleChange}
                                 />
                                
-                                <input type="submit" value="Add Service" />
+                               <button type="submit" className="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" id ="serv">Add Service</button>
                             </form>
                         </details>
             </div>

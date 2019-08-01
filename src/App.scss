@@ -33,16 +33,63 @@ $charcoal: #ccc;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 15% auto 0;
+  margin: 4% auto 0;
   max-width: 600px;
+  margin-top: 12px;
+  
 
   h3,
   input {
-    margin-bottom: 5%;
+    margin-bottom: 3%;
   }
 
   button {
-    align-self: flex-end;
+    align-self: center;
     max-width: 200px;
   }
 }
+#conf{
+ 
+  width:50%;
+}
+ div.col #last {
+  align-items: center;
+  // margin-left: 23vw;
+  
+}
+form{
+ // background: url(./sign.jpeg);
+ background-color: black;
+padding-left: 40px;
+padding-right: 40px;
+padding-top: 10px;
+opacity: 0.7;
+
+}
+
+input:focus{
+  outline: 0 0 0 0  !important;
+  box-shadow: 0 0 0 0 !important;
+}
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: lightgoldenrodyellow;
+  border-bottom: 3px solid #343a40;
+  
+}
+.card-body {
+  background-color: lightgoldenrodyellow;
+  border-bottom: 3px solid #343a40;
+}
+#change {
+  color: whitesmoke;
+  border-color: lightgoldenrodyellow;
+}
+#cat {
+  padding-right: 31px;
+}
+#serv {
+  padding-top: 0.8rem;
+}
+

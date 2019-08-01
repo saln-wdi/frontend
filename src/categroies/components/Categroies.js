@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import {index, create, destroy} from '../api'
+import './Category.css'
 class Categroies extends Component 
 {
     state = 
@@ -68,25 +69,10 @@ class Categroies extends Component
     {
         return(
             <div>
-                {this.state.categories.map(category =>
-                    <div key={category._id}>
-                    <Link to={`/categroies/${category._id}`}>
-                    <h1>{category.name}</h1>
-                    </Link>
-                    &nbsp; 
-                    <Link to={`/categroies/edit/${category._id}`}>
-                        Edit
-                    </Link>
-                    &nbsp; 
-                    <Link to={`/categroies`} onClick={() => this.destroy(category._id)}>
-                        Destroy
-                    </Link>  
-                    </div>
-                )}
                 <details>
                     <summary>Add Category</summary>
-                    <form onSubmit={this.handleSubmit}>
-                        <label htmlFor="name">Name</label>
+                    <form className='auth-form text-center' onSubmit={this.handleSubmit}>
+                        <label id= "cat" htmlFor="name">Name</label>
                         <input
                         required
                         name="name"
@@ -99,6 +85,24 @@ class Categroies extends Component
                         <input type="submit" value="Add" />
                     </form>
                 </details>
+
+                {this.state.categories.map(category =>
+                    <div className=" list-group-item justify-content-between align-items-center" key={category._id}>
+                    <Link to={`/categroies/${category._id}`}>
+                    <h1>{category.name}</h1>
+                    </Link>
+                    &nbsp;
+                    <div> 
+                    <Link className="btn btn-secondary" to={`/categroies/edit/${category._id}`}>
+                        Edit
+                    </Link>
+                    &nbsp; 
+                    <Link className="btn btn-danger" to={`/categroies`} onClick={() => this.destroy(category._id)}>
+                        Destroy
+                    </Link>  
+                    </div>
+                    </div>
+                )}
             </div>
         )
     }
